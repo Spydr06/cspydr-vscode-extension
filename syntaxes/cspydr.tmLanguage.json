@@ -1,0 +1,102 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CSpydr",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#literal_keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#chars"
+		},
+		{
+			"include": "#block_comments"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.cspydr",
+					"match": "\\b(if|loop|ret|<-|match|fn|let|mut|type|struct|import|else)\\b"
+				},
+				{
+					"name": "keyword.other.cspydr",
+					"match": "\\b(struct|enum|i32|i64|u32|u64|f32|f64|bool|char)"
+				}
+			]
+		},
+		"types": {
+		},
+		"operators": {
+			
+		},
+		"comments": {
+			"name": "comment.line.cspydr",
+			"begin": "#",
+			"end": "(\r\n|\n)",
+			"patterns": [{
+				"name": "comment.line.cspydr",
+				"match": "\\\\."	
+			}]
+		},
+		"block_comments": {
+			"name": "comment.block.cspydr",
+			"begin": "##",
+			"end": "##",
+			"patterns": [{
+				"name": "comment.block.cspydr",
+				"match": "\\\\."
+			}]
+		},
+		"literal_keywords": {
+			"name": "constant.other.cspydr",
+			"patterns": [{
+				"name": "constant.other.cspydr",
+				"match": "\\b(true|false|nil)\\b"
+			}]
+		},
+		"numbers": {
+			"name": "constant.numeric.cspydr",
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|((?<![a-zA-Z0-9_])[0-9_]+))"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cspydr",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cspydr",
+					"match": "\\\\."
+				}
+			]
+		},
+		"chars": {
+			"name": "string.quoted.single.cspydr",
+			"patterns": [
+				{
+					"name": "constant.character.cspydr",
+					"match": "'[^';]'"
+				}
+			]
+		}
+	},
+	"scopeName": "source.csp"
+}

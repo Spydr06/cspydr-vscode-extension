@@ -1,0 +1,25 @@
+{
+    "name": "cspydr-syntax-highlighting",
+    "displayName": "CSpydr Syntax Highlighting",
+    "description": "Adds syntax highlighting support for the CSpydr programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cspydr",
+            "aliases": ["CSpydr", "cspydr"],
+            "extensions": [".csp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cspydr",
+            "scopeName": "source.csp",
+            "path": "./syntaxes/cspydr.tmLanguage.json"
+        }]
+    }
+}
