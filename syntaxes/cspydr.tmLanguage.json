@@ -32,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|ret|<-|match|fn|let|mut|type|struct|import|else)\\b"
+					"match": "\\b(if|loop|ret|<-|match|fn|let|mut|type|struct|import|else|macro)\\b"
 				},
 				{
 					"name": "keyword.other.cspydr",
