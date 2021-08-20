@@ -25,6 +25,9 @@
 		},
 		{
 			"include": "#comments"
+		},
+		{
+			"include": "#macros"
 		}
 	],
 	"repository": {
@@ -32,11 +35,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|ret|<-|match|fn|let|mut|type|struct|import|else|macro)\\b"
+					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|fn|let|mut|type|struct|import|else|macro|sizeof|typeof|noop)\\b"
 				},
 				{
-					"name": "keyword.other.cspydr",
-					"match": "\\b(struct|enum|i32|i64|u32|u64|f32|f64|bool|char)"
+					"name": "entity.name.type.cspydr",
+					"match": "\\b(struct|enum|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|void)"
 				}
 			]
 		},
@@ -94,6 +97,14 @@
 				{
 					"name": "constant.character.cspydr",
 					"match": "'[^';]'"
+				}
+			]
+		},
+		"macros": {
+			"patterns": [
+				{
+					"name": "vairable.name.cspydr",
+					"match": "[0-9a-zA-Z_]+!"
 				}
 			]
 		}
