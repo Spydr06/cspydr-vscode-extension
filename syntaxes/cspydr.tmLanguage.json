@@ -35,7 +35,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|fn|let|mut|type|struct|import|else|macro|sizeof|typeof|noop)\\b"
+					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|fn|let|mut|type|struct|import|else|macro|sizeof|typeof|noop|extern)\\b"
 				},
 				{
 					"name": "entity.name.type.cspydr",
