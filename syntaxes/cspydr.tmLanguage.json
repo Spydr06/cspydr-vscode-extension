@@ -35,11 +35,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|fn|let|mut|type|struct|import|else|macro|sizeof|typeof|noop|extern)\\b"
+					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|fn|let|mut|type|struct|import|else|macro|sizeof|typeof|noop|extern|const|complex)\\b"
 				},
 				{
 					"name": "entity.name.type.cspydr",
-					"match": "\\b(struct|enum|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|void)"
+					"match": "\\b(struct|enum|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|f80|bool|char|void|usize)"
 				}
 			]
 		},
