@@ -37,7 +37,7 @@
 				},
 				{
 					"name": "keyword.other.cspydr",
-					"match": "\\b(fn|let|type|import|else|macro|noop|namespace)\\b"
+					"match": "\\b(fn|let|type|import|else|macro|noop|namespace|extern)\\b"
 				},
 				{
 					"name": "storage.modifier.cspydr",
@@ -45,7 +45,7 @@
 				},
 				{
 					"name": "keyword.operator.cspydr",
-					"match": "\\b(sizeof|typeof)\\b"
+					"match": "\\b(sizeof|len|va_arg)\\b"
 				},
 				{
 					"name": "constant.other.cspydr",
@@ -79,10 +79,16 @@
 		},
 		"numbers": {
 			"name": "constant.numeric.cspydr",
-			"patterns": [{
-				"name": "constant.numeric",
-				"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|((?<![a-zA-Z0-9_])[0-9_]+))"
-			}]
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|((?<![a-zA-Z0-9_])[0-9_]+))"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "(²|³)"
+				}
+			]
 		},
 		"strings": {
 			"patterns": [
@@ -101,6 +107,10 @@
 				{
 					"name": "entity.name.function.cspydr",
 					"match": "[0-9a-zA-Z_]+!"
+				},
+				{
+					"name": "entity.name.function.cspydr",
+					"match": "`.+`"
 				}
 			]
 		}
