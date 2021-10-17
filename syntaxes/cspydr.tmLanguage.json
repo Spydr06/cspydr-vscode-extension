@@ -70,8 +70,8 @@
 		},
 		"block_comments": {
 			"name": "comment.block.cspydr",
-			"begin": "##",
-			"end": "##",
+			"begin": "#\\[",
+			"end": "]#",
 			"patterns": [{
 				"name": "comment.block.cspydr",
 				"match": "\\\\."
