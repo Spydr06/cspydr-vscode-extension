@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "entity.name.type.cspydr",
-					"match": "\\b(struct|enum|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|f80|bool|char|void|usize)"
+					"match": "\\b(typeof|struct|enum|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|f80|bool|char|void|usize)"
 				},
 				{
 					"name": "keyword.other.cspydr",
@@ -110,7 +110,15 @@
 				},
 				{
 					"name": "entity.name.function.cspydr",
+					"match": "([0-9a-zA-Z_]+)(?=\\()"
+				},
+				{
+					"name": "entity.name.function.cspydr",
 					"match": "`.+`"
+				},
+				{
+					"name":"entity.name.function.cspydr",
+					"match": "$[0-9a-zA-Z_]+"
 				}
 			]
 		}
