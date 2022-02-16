@@ -29,27 +29,27 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|asm)\\b"
+					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|asm|else|noop)\\b"
 				},
 				{
 					"name": "entity.name.type.cspydr",
-					"match": "\\b(typeof|struct|enum|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|f80|bool|char|void|usize)"
+					"match": "\\b(typeof|struct|enum|union|i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|f80|bool|char|void|usize)"
 				},
 				{
 					"name": "keyword.other.cspydr",
-					"match": "\\b(fn|let|type|import|else|macro|noop|namespace|extern)\\b"
+					"match": "\\b(fn|let|type|import|macro|namespace|extern)\\b"
 				},
 				{
 					"name": "storage.modifier.cspydr",
-					"match": "\\b(const|complex|atimic|volatile)\\b"
+					"match": "\\b(const|complex|atomic|volatile)\\b"
 				},
 				{
 					"name": "keyword.operator.cspydr",
-					"match": "\\b(sizeof|len|va_arg)\\b"
+					"match": "\\b(sizeof|alignof|len|va_arg)\\b"
 				},
 				{
 					"name": "constant.other.cspydr",
-					"match": "\\b(true|false|nil)\\b"
+					"match": "\\b(true|false|nil|²|³)\\b"
 				}
 			]
 		},
@@ -82,11 +82,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|((?<![a-zA-Z0-9_])[0-9_]+))"
-				},
-				{
-					"name": "constant.numeric",
-					"match": "(²|³)"
+					"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|((?<![a-zA-Z0-9_])[0-9]+))"
 				}
 			]
 		},
