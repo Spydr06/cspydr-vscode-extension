@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|asm|else|noop)\\b"
+					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|asm|else|noop|with)\\b"
 				},
 				{
 					"name": "entity.name.type.cspydr",
@@ -37,7 +37,7 @@
 				},
 				{
 					"name": "keyword.other.cspydr",
-					"match": "\\b(fn|let|type|import|macro|namespace|extern)\\b"
+					"match": "\\b(fn|let|type|import|macro|namespace|extern|using)\\b"
 				},
 				{
 					"name": "storage.modifier.cspydr",
@@ -45,13 +45,19 @@
 				},
 				{
 					"name": "keyword.operator.cspydr",
-					"match": "\\b(sizeof|alignof|len|va_arg)\\b"
+					"match": "\\b(sizeof|alignof|len)\\b"
 				},
 				{
 					"name": "constant.other.cspydr",
 					"match": "\\b(true|false|nil|²|³)\\b"
 				}
 			]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.cspydr",
+				"match": "\\b(__line__|__func__|__file__)\\b"
+			}]
 		},
 		"operators": {
 			"patterns": [{
@@ -82,7 +88,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|((?<![a-zA-Z0-9_])[0-9]+))"
+					"match": "(0x[0-9a-fA-F_]+|0b[0-1_]+|0o[0-7_]|((?<![a-zA-Z0-9_])[0-9]+))"
 				}
 			]
 		},
