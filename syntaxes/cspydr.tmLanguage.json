@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cspydr",
-					"match": "\\b(if|loop|while|for|break|continue|ret|<-|match|asm|else|noop|with)\\b"
+					"match": "\\b(do|unless|if|loop|while|for|break|continue|ret|<-|match|asm|else|noop|with)\\b"
 				},
 				{
 					"name": "entity.name.type.cspydr",
